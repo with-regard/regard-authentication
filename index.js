@@ -7,13 +7,13 @@ var GitHubStrategy = require('passport-github').Strategy;
 module.exports = function (userController) {
   var app = express();
 
-  var secret = process.env.COOKIE_SECRET || "secret";
+  var secret = process.env.COOKIE_SECRET;
 
   app.use(cookieParser(secret));
   app.use(cookieSession({
     name: regard-session,
     keys: [secret],
-    domain: '.localhost'
+    domain: '.withregard.io'
   }));
 
   passport.serializeUser(function (user, done) {
