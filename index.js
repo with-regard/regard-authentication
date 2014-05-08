@@ -11,7 +11,7 @@ module.exports = function (userController) {
 
   app.use(cookieParser(secret));
   app.use(cookieSession({
-    name: regard-session,
+    name: 'regard-session',
     keys: [secret],
     domain: '.withregard.io'
   }));
